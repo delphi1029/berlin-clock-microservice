@@ -1,21 +1,28 @@
 package com.weather.forcast.data;
 
-import java.util.HashMap;
+import java.time.LocalTime;
+import java.util.LinkedHashMap;
 import java.util.Map;
+
+/**
+ * This class holds the data that is returned from weather data api / service
+ * @author Deepak Lamba
+ *
+ */
 
 public class RawWeatherData {
 	
-	private Map<String, Integer> data = null;
+	private Map<LocalTime, Integer> data = null;
 	
 	public RawWeatherData() {
-		data = new HashMap<>();
+		data = new LinkedHashMap<>();
 	}
 
-	public Map<String, Integer> getData() {
+	public Map<LocalTime, Integer> getData() {
 		return data;
 	}
 	
-	public void addData(String time, Integer temperature) {
+	public void addData(LocalTime time, Integer temperature) {
 		data.put(time, temperature);
 	}
 }

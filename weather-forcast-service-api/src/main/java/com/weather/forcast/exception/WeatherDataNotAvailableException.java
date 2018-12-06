@@ -3,6 +3,10 @@ package com.weather.forcast.exception;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
+/**
+ * @author Deepak Lamba
+ *
+ */
 @ResponseStatus(HttpStatus.NOT_FOUND)
 public class WeatherDataNotAvailableException extends RuntimeException{
 

@@ -6,6 +6,10 @@ import org.springframework.http.HttpStatus;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
+/**
+ * @author Deepak Lamba
+ *
+ */
 public class ApplicationError {
 	
 	private HttpStatus status;
@@ -15,7 +19,7 @@ public class ApplicationError {
 	
 	private String message;
 	
-	public ApplicationError(HttpStatus status,String message, RuntimeException ex) {
+	public ApplicationError(HttpStatus status,String message) {
 		this.status = status;
 		this.timestamp = LocalDateTime.now();
 		this.message = message;
